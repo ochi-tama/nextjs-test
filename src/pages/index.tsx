@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
@@ -7,8 +6,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
 import AppHeader from '../components/Header'
+import UploadButtons from '../components/Upload/uploadButton'
 
-export default function Index() {
+export const Index = () => {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -29,9 +29,7 @@ export default function Index() {
             <HeroButtonDiv>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+                  <UploadButtons></UploadButtons>
                 </Grid>
               </Grid>
             </HeroButtonDiv>
@@ -52,3 +50,5 @@ const HeroContentDiv = styled.div`
 const HeroButtonDiv = styled.div`
   margintop: ${(props) => props.theme.spacing(4)};
 `
+
+export default Index
