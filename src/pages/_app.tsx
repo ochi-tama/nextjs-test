@@ -5,6 +5,7 @@ import {
 } from '@material-ui/styles'
 import React, { useEffect } from 'react'
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
+import { AuthProvider } from '../context/AuthContext'
 import theme from '../styles/theme'
 
 const MyApp = ({ Component, pageProps }): JSX.Element => {
@@ -21,7 +22,9 @@ const MyApp = ({ Component, pageProps }): JSX.Element => {
       <MaterialUIThemeProvider theme={theme}>
         <StyledComponentsThemeProvider theme={theme}>
           <CssBaseline />
-          <Component {...pageProps} />
+          <AuthProvider>
+            <Component {...pageProps} />
+          </AuthProvider>
         </StyledComponentsThemeProvider>
       </MaterialUIThemeProvider>
     </StylesProvider>
