@@ -22,10 +22,10 @@ const Footer = () => {
         Footer
       </Typography>
       <Typography
+        component="h1"
         variant="subtitle1"
         align="center"
         color="textSecondary"
-        component="p"
       >
         Something here to give the footer a purpose!
         <Copyright />
