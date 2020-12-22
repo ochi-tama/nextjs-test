@@ -8,7 +8,7 @@ import initFirebase from '../../utils/firebase/initFirebase'
 initFirebase()
 
 const firebaseAuthConfig: firebaseui.auth.Config = {
-  signInFlow: 'redirect', // ログインのポップアップ画面を出す
+  signInFlow: 'popup', // ログインのポップアップ画面を出す
   // Auth providers
   // https://github.com/firebase/firebaseui-web#configure-oauth-providers
   signInOptions: [
